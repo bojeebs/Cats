@@ -3,7 +3,7 @@
 
 
 
-![Alt Text]https://github.com/bojeebs/fishfanp2/blob/main/17adb4d0-66db-45c7-83a0-ab89eb567f00_text.gif
+!https://github.com/bojeebs/fishfanp2/blob/main/17adb4d0-66db-45c7-83a0-ab89eb567f00_text.gif
 
 
 An easy to use interactive site that lets you browese through fish and find out interesting details about your favorite fish.
