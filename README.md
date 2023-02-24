@@ -6,7 +6,7 @@
 
 
 
-An easy to use interactive site that lets you browese through fish and find out interesting details about your favorite fish.
+An easy to use interactive site that lets you browse through fish and find out interesting details about your favorite fish.
 
 **Figma**
 1. https://www.figma.com/file/EiqjT4lmcBfWk68tapF2Qt/Fish-are-Friends?node-id=0%3A1&t=AH8tZ4nrbIZWTn6l-1
