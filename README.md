@@ -9,14 +9,16 @@
 
 4. Potentially a grid/flex display with fish 'cards' that are neat and tidy. 
 
-
+**Figma**
+1. https://www.figma.com/file/EiqjT4lmcBfWk68tapF2Qt/Fish-are-Friends?node-id=0%3A1&t=AH8tZ4nrbIZWTn6l-1
 
 **Schedule**
-Link to Trello>>>
+1. Link to Trello>>>
 
 **Data/API**
-https://www.fishwatch.gov/developers
-https://www.fishwatch.gov/api/species
+1. https://www.fishwatch.gov/developers
+
+2. https://www.fishwatch.gov/api/species
 
 ### MVP Goals
 
