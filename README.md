@@ -1,19 +1,13 @@
 ### Fish Are Friends Not Food
 **Description**
 
-1. Create the world's greatest fish website
-
-2. Display images of fish 
-
-3. Images will be clickable and route you to fish details
-
-4. Potentially a grid/flex display with fish 'cards' that are neat and tidy. 
+An easy to use interactive site that lets you browese through fish and find out interesting details about your favorite fish.
 
 **Figma**
 1. https://www.figma.com/file/EiqjT4lmcBfWk68tapF2Qt/Fish-are-Friends?node-id=0%3A1&t=AH8tZ4nrbIZWTn6l-1
 
 **Schedule**
-1. Link to Trello>>>
+1. Link to Trello>>>https://trello.com/b/QpoEtv89/project-management
 
 **Data/API**
 1. https://www.fishwatch.gov/developers
