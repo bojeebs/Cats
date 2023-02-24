@@ -2,7 +2,7 @@ import { Link } from "react-router-dom"
 
 
 
-const Routes = () => {
+const Nav = () => {
   return (
     <div>
       <Link to="/">Home</Link>
@@ -11,4 +11,4 @@ const Routes = () => {
   )
 }
 
-export default Routes
+export default Nav

@@ -1,13 +1,14 @@
-import React, { BrowserRouter } from 'react-router-dom'
+import { BrowserRouter } from 'react-router-dom'
 import './App.css';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 import Data from './Components/Data'
-import {Route, Routes } from 'react-route-dom'
+import {Route, Routes } from 'react-router-dom'
 import Home from './Components/Home';
 import Nav from './Components/Nav'
-import Fishone from './Components/Fishone';
-
+import Header from './Components/Header'
+import Main from './Components/Main'
+ 
 
 
 function App() {
