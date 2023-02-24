@@ -1,7 +1,7 @@
 ### Fish Are Friends Not Food
 **Description!**
 
-https://user-images.githubusercontent.com/113203952/221088627-027e149f-6a24-4034-8a7e-2820ba7672b6.gif
+
 
 
 An easy to use interactive site that lets you browese through fish and find out interesting details about your favorite fish.
