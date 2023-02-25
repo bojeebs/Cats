@@ -1,6 +1,7 @@
 import { Route, Routes } from "react-router-dom"
-import Home from './Home'
+import Home from './Catlist'
 import Data from './Data'
+import Catdetails from "./Catdetails"
 
 
 
@@ -13,8 +14,10 @@ const Main = () => {
     <div className="main">
       <Routes>
       <Route path="/" element ={<Home/>} />
-      <Route path="/data" element={<Data/>} />
+      <Route path="/cats/:catID" element = {<Catdetails/>} />
       
+      
+           
       
       
       

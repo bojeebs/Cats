@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 import axios from 'axios';
 import Data from './Components/Data'
 import {Route, Routes } from 'react-router-dom'
-import Home from './Components/Home';
+import Home from './Components/Catlist';
 import Nav from './Components/Nav'
 import Header from './Components/Header'
 import Main from './Components/Main'
@@ -28,7 +28,7 @@ return (
     <div className="main-container">
       <Main/>
     </div>
-
+    
 
     </div>
   );
