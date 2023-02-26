@@ -1,21 +1,28 @@
 import { useEffect, useState } from 'react'
-import { useNavigate, useParams } from 'react-router-dom'
-import { Link, useNaviagte } from "react-router-dom"
-import { BENGAL_PATH } from '../Globals'
-
-
+import { useParams } from 'react-router-dom'
 
 
 const Catdetails = (props) => {
+
+
+// const [cat, setCat] = useState ('')
+
+
+// let { id } = useParams()
+
+// useEffect (() => {
+//   let selectedCat = props.cats.find(
+//     (cat) => cat.id === parseInt(id)
+//   )
+//   setCat(selectedCat)
+
+// }, [props.cats, id])
+
+
+
   return (
     <div className="detail-container">
-      {/* {props.cats.map((cat, id) => (
-        <div className="card" onClick={() => showCat(id)} key={id}>
-        <Link to={'/cats/${cat.id}'}></Link>
-        <h3>{cat.name}</h3>
-        <h3>{cat.description}</h3>
-        </div>
-      ))} */}
+     
      <h1>Test </h1>
     </div>
     
@@ -36,3 +43,16 @@ export default Catdetails
   
   </div> */}
   {/* )} */}
+
+
+  // <div className="container">
+  //         {props.cats.map((cat, id) => (
+  //           <div className="img-container" onClick={() => showCat(cat)} key={cat.id}>
+  //             <div className="img-wrapper">
+  //             <img className="cat-img" src={cat.url} alt="A cute cat" />
+  //             <p className="img-caption">Bengal</p>
+  //           </div>
+  //           </div>
+            
+  //       ))}
+  //     </div>

@@ -1,6 +1,4 @@
 import { Route, Routes } from "react-router-dom"
-import Home from './Catlist'
-import Data from './Data'
 import Catdetails from "./Catdetails"
 import Catlist from "./Catlist"
 
