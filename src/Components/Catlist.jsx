@@ -1,10 +1,24 @@
 import { useState, useEffect } from 'react'
 import axios from 'axios'
-import { Link } from 'react-router-dom'
+import { useNavigate } from "react-router-dom"
 
 
 
-const Home = () => {
+
+const Catlist = (props) => {
+
+
+
+let navigate = useNavigate()
+
+const showCat = (id) => {
+  navigate(`/cats/${id}`)
+
+}
+
+
+
+
 
   const [cat, setCat] = useState ([])
   const [catone, setCatOne] = useState ([])
@@ -48,12 +62,10 @@ const Home = () => {
     
       return (
         <div className="container">
-          <div className="img-container">
+          <div className="img-container" onClick={() => showCat(cat)} key={cat.id} >
             <div className="img-wrapper">
-            <Link to={`/cats/${cat.id}`}>
-              <img className="cat-img" src={cat.url} />
-            </Link>
-              <p className="img-caption">Bengal</p>
+            <img className="cat-img" src={cat.url} />
+            <p className="img-caption">Bengal</p>
             </div>
           </div>
           <div className="img-container">
@@ -73,4 +85,4 @@ const Home = () => {
       
       }
 
-export default Home
+export default Catlist

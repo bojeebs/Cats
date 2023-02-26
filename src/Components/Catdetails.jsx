@@ -3,11 +3,7 @@ import { useNavigate, useParams } from 'react-router-dom'
 import { Link, useNaviagte } from "react-router-dom"
 import { BENGAL_PATH } from '../Globals'
 
-let navigate = useNavigate
 
-const showCat = (id) => {
-  navigate (`${id}`)
-}
 
 
 const Catdetails = (props) => {
