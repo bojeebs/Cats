@@ -50,7 +50,7 @@ const showCat = (id) => {
         const url = 'https://api.thecatapi.com/v1/images/search?breed_ids=pers'
         const getDataTwo = async () => {
             const response = await axios.get(url)
-            console.log(response.data[0])
+            // console.log(response.data[0])
             setCatTwo(response.data[0])
         }
         

@@ -1,16 +1,33 @@
 import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
+import axios from 'axios'
+import { Link } from 'react'
+import { API_KEY } from '../Globals'
+import { BASE_URL } from '../Globals'
+
+const Catdetails = (props) => { 
+
+  
+
+  let { id } = useParams()
+  
+ const [cat, setCat] = useState ({})
+ 
+ 
 
 
-const Catdetails = (props) => {
+useEffect (() => {
+  const getData = async () => {
+    const response = await axios.get(`${BASE_URL}`)
+    console.log(response.data)
+    setCat(response.data[0])
+  }
 
+  getData()
+}, [id])
 
-// const [cat, setCat] = useState ('')
-
-
-// let { id } = useParams()
-
-// useEffect (() => {
+//  useEffect (() => {
 //   let selectedCat = props.cats.find(
 //     (cat) => cat.id === parseInt(id)
 //   )
@@ -21,13 +38,20 @@ const Catdetails = (props) => {
 
 
   return (
-    <div className="detail-container">
-     
-     <h1>Test </h1>
+    <div>
+      
+        <div key={cat.id}>
+          <h3>{cat.name}</h3>
+          <p>Description: {cat.description}</p>
+          <p>Adaptability: {cat.adaptability}</p>
+        </div>
+      
     </div>
+  );
+};
+
     
-  )
-  }
+  
 
 export default Catdetails
 
