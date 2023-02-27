@@ -62,7 +62,7 @@ const showCat = (id) => {
     
       return (
         <div className="container">
-          <div className="img-container" onClick={() => showCat(cat)} key={cat.id} >
+          {/* <div className="img-container" onClick={() => showCat(cat.id)} key={cat.id} >
             <div className="img-wrapper">
             <img className="cat-img" src={cat.url} />
             <p className="img-caption">Bengal</p>
@@ -79,7 +79,7 @@ const showCat = (id) => {
               <img className="cat-img" src={catTwo.url} />
               <p className="img-caption">Persian</p>
             </div>
-          </div>
+          </div> */}
         </div>
       );
       

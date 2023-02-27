@@ -19,13 +19,13 @@ const Catdetails = (props) => {
 
 useEffect (() => {
   const getData = async () => {
-    const response = await axios.get(`${BASE_URL}`)
-    console.log(response.data)
-    setCat(response.data[0])
+    const response = await axios.get(`${BASE_URL}/search?breed_id=${id}`)
+    console.log(response)
+    setCat(response.data)
   }
 
   getData()
-}, [id])
+}, [])
 
 //  useEffect (() => {
 //   let selectedCat = props.cats.find(
