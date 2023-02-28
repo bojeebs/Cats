@@ -1,11 +1,9 @@
-import { useState, useEffect } from 'react'
-import axios from 'axios'
 import { useNavigate } from "react-router-dom"
 
 
 
 
-const Catlist = (props) => {
+const Catlist = ({cats}) => {
 
 
 
@@ -20,49 +18,51 @@ const showCat = (id) => {
 
 
 
-  const [cat, setCat] = useState ([])
-  const [catone, setCatOne] = useState ([])
-  const [catTwo, setCatTwo] = useState ([])
-
-  useEffect(() => {
-    const url = 'https://api.thecatapi.com/v1/images/search?breed_ids=beng'
-    const getData = async () => {
-        const response = await axios.get(url)
-        console.log(response.data)
-        setCat(response.data[0])
-    }
-    
-
-    getData()
-  }, [])
-      useEffect(() => {
-        const url = 'https://api.thecatapi.com/v1/images/search?breed_ids=mcoo'
-        const getDataOne = async () => {
-            const response = await axios.get(url)
-            console.log(response.data[0])
-            setCatOne(response.data[0])
-        }
-        
-
-        getDataOne()
-      }, [])
-      useEffect(() => {
-        const url = 'https://api.thecatapi.com/v1/images/search?breed_ids=pers'
-        const getDataTwo = async () => {
-            const response = await axios.get(url)
-            // console.log(response.data[0])
-            setCatTwo(response.data[0])
-        }
-        
-
-        getDataTwo()
-      }, [])
+  // const [cats, setCats] = useState ([])
+  
   
 
+  // useEffect(() => {
+  //   const url = 'https://api.thecatapi.com/v1/breeds'
+  //   const getData = async () => {
+  //   const response = await axios.get(url)
+  //      console.log(response.data)
+  //   setCats(response.data)
+  //   }
     
+
+  //   getData()
+  // }, [])
+  
+  console.log(cats)
+
+    if (cats) {
+
       return (
-        <div className="container">
-          {/* <div className="img-container" onClick={() => showCat(cat.id)} key={cat.id} >
+          <div className="container">
+                {cats.map(cat => (
+                  <div className="cat-card" onClick={() => showCat(cat.id)} key={cat.id}>
+                <h2>{cat.name}</h2>
+                </div>
+              ))}
+            
+          </div>
+        )
+      } else {
+        return <h1>loading please wait</h1>
+      }
+    }
+export default Catlist
+
+
+
+
+ // <div className="card" onClick={() => showCat(id)} key={id}>
+            //   <Link to={`/cats/${cat.id}`}></Link>
+            //         <h3>{cat.name}</h3>
+
+
+ {/* <div className="img-container" onClick={() => showCat(cat.id)} key={cat.id} >
             <div className="img-wrapper">
             <img className="cat-img" src={cat.url} />
             <p className="img-caption">Bengal</p>
@@ -80,9 +80,3 @@ const showCat = (id) => {
               <p className="img-caption">Persian</p>
             </div>
           </div> */}
-        </div>
-      );
-      
-      }
-
-export default Catlist

@@ -6,7 +6,7 @@ import { Link } from 'react'
 import { API_KEY } from '../Globals'
 import { BASE_URL } from '../Globals'
 
-const Catdetails = (props) => { 
+const Catdetails = ({cats}) => { 
 
   
 
@@ -16,39 +16,32 @@ const Catdetails = (props) => {
  
  
 
+ useEffect (() => {
+  console.log(id)
+  let selectedCat = cats.find(
+    (cat) => cat.id === (id)
+   
+  )
+  console.log(selectedCat)
+  setCat(selectedCat)
 
-useEffect (() => {
-  const getData = async () => {
-    const response = await axios.get(`${BASE_URL}/search?breed_id=${id}`)
-    console.log(response)
-    setCat(response.data)
-  }
-
-  getData()
-}, [])
-
-//  useEffect (() => {
-//   let selectedCat = props.cats.find(
-//     (cat) => cat.id === parseInt(id)
-//   )
-//   setCat(selectedCat)
-
-// }, [props.cats, id])
+}, [cat, id])
 
 
 
-  return (
-    <div>
-      
-        <div key={cat.id}>
-          <h3>{cat.name}</h3>
-          <p>Description: {cat.description}</p>
-          <p>Adaptability: {cat.adaptability}</p>
+  return cats ? (
+        <div className="detail">
+         <button>Back To Home Page!</button>
+         <h3>{cat.name}</h3>
+         <h3>{cat.description}</h3>
+         
+          
+          
         </div>
       
-    </div>
-  );
-};
+    
+  ) : null
+}
 
     
   
@@ -80,3 +73,13 @@ export default Catdetails
             
   //       ))}
   //     </div>
+
+  // useEffect (() => {
+//   const getData = async () => {
+//     const response = await axios.get(`${BASE_URL}/search?breed_id=${id}`)
+//     console.log(response)
+//     setCats(response.data)
+//   }
+
+//   getData()
+// }, [])
