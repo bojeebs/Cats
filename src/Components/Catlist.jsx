@@ -28,27 +28,28 @@ console.log("line 26", props.cats)
 
 
   
-    
-    //   console.log("line 31", catprops[0].image.url)
-    //   this line was catprops[0]
     return catprops && catprops[0] ? (
       <div className="container">
         {catprops.map(cat => (
-          <div className="cat-card" onClick={() => showCat(cat.id)} key={cat.id}>
-            <h2>{cat.name}</h2>
-            {cat.image ? <img className="cat-img" alt="cat" src= {cat.image.url} /> : null}
+          <div className="img-wrapper">
+            <div className="cat-card" onClick={() => showCat(cat.id)} key={cat.id}>
+              {/* <div className="caption-container"> */}
+                <h2 className="img-caption">{cat.name}</h2>
+              {/* </div> */}
+              {cat.image ? <img className="cat-img" alt="cat" src= {cat.image.url} /> : null}
+              
+            </div>
           </div>
+
+          
         ))}
+
       </div>
     ) : <h1>Loading</h1>
         }
 export default Catlist
 
-//  {props.cats ? props.countries.map((cats, id)) => {
-//   <div (id)
-//       }
-
-
+//  
  
 
 
