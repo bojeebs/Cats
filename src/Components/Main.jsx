@@ -15,16 +15,18 @@ const Main = () => {
   
 
   useEffect(() => {
-    const url = 'https://api.thecatapi.com/v1/breeds'
+    const url = 'https://api.thecatapi.com/v1/breeds?attach_image=1&api_key=live_o1Q9jrsGJowSnKoY9Sh1gFQdRJ23K8p6IyxstP8meoEXmsek8QMENWURdLTT6ubS'
     const getData = async () => {
     const response = await axios.get(url)
-       console.log(response.data)
+    console.log(getData)
+       //console.log("mainlog", response.data[0].image.url)
     setCats(response.data)
     }
     
 
     getData()
   }, [])
+
   return (
     <div className="main">
       <Routes>

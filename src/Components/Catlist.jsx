@@ -5,7 +5,7 @@ import { useState, useEffect } from "react"
 
 
 
-const Catlist = ({cats}) => {
+const Catlist = (props) => {
 
 
 
@@ -15,68 +15,41 @@ const showCat = (id) => {
   navigate(`/cats/${id}`)
 } 
 
-//axios call for cat images to grab each image reference id
-//use state of catimgurl 
-//use effect for reference id
 
-// const [catimg, getCatImg] = useState("")
+const [catprops, setCatProps] = useState([])
 
-// useEffect(() => {
-//   const url = 'https://api.thecatapi.com/v1/breeds/'
-//   const getData = async () => {
-//   const response = await axios.get(url)
-//   console.log(response.data[0])
-//   getCatImg(response.data[0])
-//   }
+useEffect(() => {
+  setCatProps(props.cats)
+ 
   
+}, [props.cats.image])
+// console.log(setCatProps)
+console.log("line 26", props.cats)
 
-//   getData()
-// }, [])
 
-
-
-  console.log(cats)
-
-    if (cats) {
-
-      return (
-          <div className="container">
-                {cats.map(cat => (
-                  <div className="cat-card" onClick={() => showCat(cat.id)} key={cat.id}>
-                  <h2>{cat.name}</h2>
-                </div>
-              ))}
-            
+  
+    
+    //   console.log("line 31", catprops[0].image.url)
+    //   this line was catprops[0]
+    return catprops && catprops[0] ? (
+      <div className="container">
+        {catprops.map(cat => (
+          <div className="cat-card" onClick={() => showCat(cat.id)} key={cat.id}>
+            <h2>{cat.name}</h2>
+            {cat.image ? <img className="cat-img" alt="cat" src= {cat.image.url} /> : null}
           </div>
-        )
-      } else {
-        return <h1>loading please wait</h1>
-      }
-    }
-
+        ))}
+      </div>
+    ) : <h1>Loading</h1>
+        }
 export default Catlist
 
-
+//  {props.cats ? props.countries.map((cats, id)) => {
+//   <div (id)
+//       }
 
 
  
 
 
- {/* <div className="img-container" onClick={() => showCat(cat.id)} key={cat.id} >
-            <div className="img-wrapper">
-            <img className="cat-img" src={cat.url} />
-            <p className="img-caption">Bengal</p>
-            </div>
-          </div>
-          <div className="img-container">
-            <div className="img-wrapper">
-              <img className="cat-img" src={catone.url} />
-              <p className="img-caption">Maine Coon</p>
-            </div>
-          </div>
-          <div className="img-container">
-            <div className="img-wrapper">
-              <img className="cat-img" src={catTwo.url} />
-              <p className="img-caption">Persian</p>
-            </div>
-          </div> */}
+          
