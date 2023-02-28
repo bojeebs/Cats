@@ -1,10 +1,7 @@
 import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
-import { useNavigate } from 'react-router-dom'
-import axios from 'axios'
-import { Link } from 'react'
-import { API_KEY } from '../Globals'
-import { BASE_URL } from '../Globals'
+
+
 
 const Catdetails = ({cats}) => { 
 
@@ -17,22 +14,22 @@ const Catdetails = ({cats}) => {
  
 
  useEffect (() => {
-  console.log(id)
+  // console.log(id)
   let selectedCat = cats.find(
     (cat) => cat.id === (id)
    
   )
-  console.log(selectedCat)
+  // console.log(selectedCat)
   setCat(selectedCat)
 
-}, [cat, id])
+}, [cats, id])
 
 
 
   return cats ? (
         <div className="detail">
          <button>Back To Home Page!</button>
-         <h3>{cat.name}</h3>
+         <h3>{cat.name}</h3> 
          <h3>{cat.description}</h3>
          
           
@@ -50,15 +47,9 @@ export default Catdetails
 
 
 
-{/* {props.cat.map((cats) =>
-  <div key={cats.id} className="card-detail">
-  <img src={`${BENGAL_PATH}`}/>
-  <h3>{cats.name}</h3>
-  <h3>{cats.description}</h3>
+
   
   
-  
-  </div> */}
   {/* )} */}
 
 

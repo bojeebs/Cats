@@ -1,4 +1,6 @@
 import { useNavigate } from "react-router-dom"
+import axios from "axios"
+import { useState, useEffect } from "react"
 
 
 
@@ -11,29 +13,28 @@ let navigate = useNavigate()
 
 const showCat = (id) => {
   navigate(`/cats/${id}`)
+} 
 
-}
+//axios call for cat images to grab each image reference id
+//use state of catimgurl 
+//use effect for reference id
 
+// const [catimg, getCatImg] = useState("")
 
-
-
-
-  // const [cats, setCats] = useState ([])
+// useEffect(() => {
+//   const url = 'https://api.thecatapi.com/v1/breeds/'
+//   const getData = async () => {
+//   const response = await axios.get(url)
+//   console.log(response.data[0])
+//   getCatImg(response.data[0])
+//   }
   
-  
 
-  // useEffect(() => {
-  //   const url = 'https://api.thecatapi.com/v1/breeds'
-  //   const getData = async () => {
-  //   const response = await axios.get(url)
-  //      console.log(response.data)
-  //   setCats(response.data)
-  //   }
-    
+//   getData()
+// }, [])
 
-  //   getData()
-  // }, [])
-  
+
+
   console.log(cats)
 
     if (cats) {
@@ -42,7 +43,7 @@ const showCat = (id) => {
           <div className="container">
                 {cats.map(cat => (
                   <div className="cat-card" onClick={() => showCat(cat.id)} key={cat.id}>
-                <h2>{cat.name}</h2>
+                  <h2>{cat.name}</h2>
                 </div>
               ))}
             
@@ -52,14 +53,13 @@ const showCat = (id) => {
         return <h1>loading please wait</h1>
       }
     }
+
 export default Catlist
 
 
 
 
- // <div className="card" onClick={() => showCat(id)} key={id}>
-            //   <Link to={`/cats/${cat.id}`}></Link>
-            //         <h3>{cat.name}</h3>
+ 
 
 
  {/* <div className="img-container" onClick={() => showCat(cat.id)} key={cat.id} >
