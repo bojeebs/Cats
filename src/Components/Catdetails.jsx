@@ -29,7 +29,8 @@ const Catdetails = ({cats}) => {
   return cats ? (
         <div className="detail">
          <button>Back To Home Page!</button>
-         <h3>{cat.name}</h3> 
+         <h1>{cat.name}</h1> 
+         
          <h3>{cat.description}</h3>
          
           
