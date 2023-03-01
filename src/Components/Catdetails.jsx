@@ -14,12 +14,12 @@ const Catdetails = ({cats}) => {
  
 
  useEffect (() => {
-  // console.log(id)
+  
   let selectedCat = cats.find(
     (cat) => cat.id === (id)
    
   )
-  // console.log(selectedCat)
+  
   setCat(selectedCat)
 
 }, [cats, id])
@@ -27,14 +27,14 @@ const Catdetails = ({cats}) => {
 
 
   return cats ? (
-        <div className="detail">
-         <button>Back To Home Page!</button>
-         <h1>{cat.name}</h1> 
+        <div className="detail-container">
+          <div className="detail">
          
-         <h3>{cat.description}</h3>
+         <h1 className="cat-title">{cat.name}</h1> 
+         <h3 className="description">{cat.description}</h3>
          
           
-          
+         </div>
         </div>
       
     
@@ -50,28 +50,3 @@ export default Catdetails
 
 
   
-  
-  {/* )} */}
-
-
-  // <div className="container">
-  //         {props.cats.map((cat, id) => (
-  //           <div className="img-container" onClick={() => showCat(cat)} key={cat.id}>
-  //             <div className="img-wrapper">
-  //             <img className="cat-img" src={cat.url} alt="A cute cat" />
-  //             <p className="img-caption">Bengal</p>
-  //           </div>
-  //           </div>
-            
-  //       ))}
-  //     </div>
-
-  // useEffect (() => {
-//   const getData = async () => {
-//     const response = await axios.get(`${BASE_URL}/search?breed_id=${id}`)
-//     console.log(response)
-//     setCats(response.data)
-//   }
-
-//   getData()
-// }, [])

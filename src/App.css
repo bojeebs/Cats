@@ -10,7 +10,7 @@
 .App {
   display: flex;
   align-items: center;
-  
+  background-color:  #E6E6FA;
 }
 
 
@@ -20,8 +20,8 @@
   max-width: 800px;
   grid-gap: 16px;
   margin: 0 auto;
-  margin-top: 50px;
-  margin-left: 250px;
+  margin-top: 200px;
+  margin-left: 325px;
   
 }
 
@@ -63,10 +63,14 @@
 
 .home-btn {
   text-decoration: none;
-  font-size: 18px; 
+  font-size: 35px; 
   position: absolute; 
   top: 30px; 
   left: 65px; 
+  transition: background-color 0.3s ease, color 0.3s ease;
+  padding: 10px 20px;
+  margin-left: 725px;
+  color: black;
 }
 
 .img-wrapper:hover .img-caption {
@@ -77,4 +81,43 @@
   transform: scale(1.1);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5)
   
+}
+
+.detail-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid black;
+  padding: 20px;
+  margin-top: 150px;
+  width: 750px;
+  margin-left: 475px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  padding-left: 9px;
+}
+
+.detail {
+  text-align: center;
+}
+
+.cat-title {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.temper {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.description {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.trait {
+  font-size: 16px;
+  text-align: left;
+  position: relative;
 }
