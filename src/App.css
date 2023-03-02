@@ -121,3 +121,51 @@
   text-align: left;
   position: relative;
 }
+.buttons {
+
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+
+.button {
+  margin: 0 10px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  background-color: #007bff;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.wiki-btn:hover,
+.vet-btn:hover {
+  background-color: #0056b3;
+}
+.nav-buttons {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: white;
+}
+
+.prev-button, .next-button {
+  padding: 10px 20px;
+  border: none;
+  background-color: #3498db;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.prev-button:hover, .next-button:hover {
+  background-color: #2980b9;
+}

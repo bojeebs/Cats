@@ -21,8 +21,8 @@ useEffect(() => {
   setCatProps(props.cats)
  
   
-}, [props.cats.image])
-
+}, [props.cats])
+console.log(props.cats)
 
   return catprops && catprops[0] ? (
       <div className="container">
