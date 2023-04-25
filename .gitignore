@@ -24,3 +24,4 @@ yarn-error.log*
 cats-app/node_modules/.cache/default-development/index.pack.old
 cats-app/node_modules/.cache/default-development/0.pack
 *.pack
+*.old
