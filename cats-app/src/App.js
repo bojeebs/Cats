@@ -1,8 +1,6 @@
 import './App.css'
-import Header from './Components/Header'
 import Main from './Components/Main'
- 
-
+import Nav  from './Components/Nav'
 
 function App() {
 
@@ -14,9 +12,7 @@ function App() {
 
 return (
     <div className="App">
-     <div className="header-container">
-      <Header/>
-     </div>
+        <Nav/>
 
     <div className="main-container">
       <Main/>

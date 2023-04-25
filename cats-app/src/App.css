@@ -8,9 +8,7 @@
 
 
 .App {
-  display: flex;
-  align-items: center;
-  background-color:  #E6E6FA;
+  
 }
 
 
@@ -20,8 +18,8 @@
   max-width: 800px;
   grid-gap: 16px;
   margin: 0 auto;
-  margin-top: 200px;
-  margin-left: 325px;
+  margin-top: 8rem;
+  margin-left: 18rem;
   
 }
 
@@ -61,16 +59,22 @@
 }
 
 
+.divhome {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  
+}
+
 .home-btn {
   text-decoration: none;
-  font-size: 35px; 
-  position: absolute; 
-  top: 30px; 
-  left: 65px; 
+  font-size: 3rem; 
   transition: background-color 0.3s ease, color 0.3s ease;
   padding: 10px 20px;
-  margin-left: 725px;
   color: black;
+  display: inline-block;
+  margin-right: 14rem;
 }
 
 .img-wrapper:hover .img-caption {
@@ -169,3 +173,48 @@
 .prev-button:hover, .next-button:hover {
   background-color: #2980b9;
 }
+
+.prev-button {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+}
+
+.next-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
+
+@media only screen and (max-width: 1200px) {
+  .container {
+  grid-template-columns: repeat(3, 1fr);
+  margin-left: 225px;
+  }
+  }
+  
+  @media only screen and (max-width: 900px) {
+  .container {
+  grid-template-columns: repeat(2, 1fr);
+  margin-left: 50px;
+  }
+  .home-btn {
+  font-size: 45px;
+  margin-right: 18rem;
+  }
+  }
+  
+  @media only screen and (max-width: 600px) {
+  .container {
+  grid-template-columns: 1fr;
+  margin-left: 75px;
+  }
+  .home-btn {
+  font-size: 20px;
+  margin-left: 300px;
+  }
+  .detail-container {
+  width: 90%;
+  margin-left: 5%;
+  }
+  }

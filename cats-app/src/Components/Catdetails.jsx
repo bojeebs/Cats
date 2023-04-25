@@ -1,13 +1,28 @@
 import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
-
+import { useNavigate } from 'react-router-dom'
 
 
 
 const Catdetails = ({cats}) => { 
 
+  const navigate = useNavigate()
+
+  const handlePrevClick = () => {
+    const currentIndex = cats.findIndex(cat => cat.id === id);
+    const prevIndex = (currentIndex - 1 + cats.length) % cats.length;
+    const prevCat = cats[prevIndex];
+    navigate(`/cats/${prevCat.id}`)
+    
+  }
   
-  
+  const handleNextClick = () => {
+    const currentIndex = cats.findIndex(cat => cat.id === id);
+    const nextIndex = (currentIndex + 1) % cats.length;
+    const nextCat = cats[nextIndex];
+    navigate(`/cats/${nextCat.id}`)
+    
+  }
 
   let { id } = useParams()
   
@@ -29,6 +44,9 @@ const Catdetails = ({cats}) => {
 
 
 return cat ? (
+  <>
+  <button className="prev-button" onClick={handlePrevClick}>Previous</button>
+  <button className="next-button" onClick={handleNextClick}>Next</button>
   <div className="detail-container">
     <div className="detail">
       <h1 className="cat-title">{cat.name}</h1> 
@@ -76,6 +94,7 @@ return cat ? (
     </div>
    
   </div>
+  </>
 ) : null
 }
 
