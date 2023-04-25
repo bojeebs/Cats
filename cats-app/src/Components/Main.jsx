@@ -6,6 +6,7 @@ import axios from "axios"
 
 
 //! Component Heirarchy is a SOB. App.js>>>Main>>>Catlist>>>Catdetails
+//! Biggest Challenges Api endpoints, working in a more focused manner
 
 
 
@@ -19,7 +20,7 @@ const Main = () => {
     const getData = async () => {
     const response = await axios.get(url)
     console.log(getData)
-       //console.log("mainlog", response.data[0].image.url)
+     
     setCats(response.data)
     }
     
